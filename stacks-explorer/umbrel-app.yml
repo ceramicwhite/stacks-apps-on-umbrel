@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: stacks-stacks-explorer
+category: Stacks
+name: Stacks Explorer
+version: "1.56.0"
+icon: https://svgur.com/s/ngB
+tagline: Explore transactions and accounts on the Stacks blockchain. 
+description: >-
+  Explore transactions and accounts on the Stacks blockchain. Clone any contract and experiment in your browser with the Explorer sandbox.
+developer: Stacks Governance
+website: https://www.hiro.so/stacks-explorer
+submitter: Jasper
+dependencies:
+  - stacks-node
+repo: https://github.com/hirosystems/explorer
+support: https://discord.gg/XyZBbYh3kT
+port: 3997
+gallery:
+  - https://i.imgur.com/dQ90Qi4.jpg
+  - https://i.imgur.com/p2k0NUc.jpg
+  - https://i.imgur.com/gb34qps.jpg
+  - https://i.imgur.com/Etfeo54.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false

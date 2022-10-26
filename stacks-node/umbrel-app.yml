@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: stacks-stacks-node
+category: Stacks
+name: Stacks Node
+version: "2.05.0.5.1"
+icon: https://svgshare.com/i/nez.svg
+tagline: Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. 
+description: >-
+  Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. Stacks 2.0 implements Proof of Transfer (PoX) mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Stacks (STX) miners write new blocks on the separate Stacks blockchain. With PoX there is no need to modify Bitcoin to enable smart contracts and apps around it. See this page for more details and resources.
+developer: Stacks Governance
+website: https://stacks.co/
+submitter: Jasper
+dependencies:
+  - bitcoin
+repo: https://github.com/stacks-network/stacks-blockchain
+support: https://discord.gg/XyZBbYh3kT
+port: 3998
+gallery:
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
