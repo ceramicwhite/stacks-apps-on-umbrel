@@ -1,7 +1,7 @@
 manifestVersion: 1
-id: stacks-stacks-node
+id: stacks-blockchain
 category: Stacks
-name: Stacks Node
+name: Stacks Blockchain
 version: "2.05.0.5.1"
 icon: https://svgshare.com/i/nez.svg
 tagline: Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. 

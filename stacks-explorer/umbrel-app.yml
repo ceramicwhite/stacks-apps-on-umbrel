@@ -1,6 +1,6 @@
 manifestVersion: 1
 id: stacks-stacks-explorer
-category: Stacks
+category: Explorer
 name: Stacks Explorer
 version: "1.56.0"
 icon: https://svgshare.com/i/nfH.svg
@@ -11,7 +11,7 @@ developer: Hiro Systems
 website: https://www.hiro.so/stacks-explorer
 submitter: Jasper
 dependencies:
-  - stacks-stacks-node
+  - stacks-blockchain
 repo: https://github.com/hirosystems/explorer
 support: https://discord.gg/XyZBbYh3kT
 port: 3997
