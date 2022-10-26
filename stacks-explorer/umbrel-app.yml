@@ -11,7 +11,7 @@ developer: Stacks Governance
 website: https://www.hiro.so/stacks-explorer
 submitter: Jasper
 dependencies:
-  - stacks-node
+  - stacks-stacks-node
 repo: https://github.com/hirosystems/explorer
 support: https://discord.gg/XyZBbYh3kT
 port: 3997
