@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: stacks-alex-datalake
+category: Indexer
+name: Alex Datalake
+version: "0.0.2"
+icon: https://cloudflare-ipfs.com/ipfs/Qmf7BFka5LHvr3TDpWfnUu6VVGxojn3otZKp6iiYY4Hx4y/alex-datalake.svg
+tagline: Alexandria STX Data Lake 
+description: >-
+  The Alexandria Indexer is a system of layered services that index the data stored on the Stacks blockchain, equipping builders with transaction, event and NFT-state data on which they can build their applications.
+developer: TradePort
+website: https://www.tradeport.xyz/
+submitter: Jasper
+dependencies:
+  - stacks-blockchain
+repo: https://github.com/byzantion-xyz/alexandria-stx-datalake
+support: https://discord.gg/VegN2ywRY5
+port: 4001
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false
