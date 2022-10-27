@@ -1,0 +1,47 @@
+version: "3.9"
+services:
+  app_proxy:
+    environment:
+      APP_HOST: $APP_ALEX_GRAPHQL_IP
+      APP_PORT: 8080
+
+  postgres:
+    image: postgres:${POSTGRES_VERSION:-14}-alpine
+    container_name: postgres
+    restart: on-failure
+    env_file:
+      - ${APP_DATA_DIR}/data/.env
+    environment:
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-postgres}
+      - POSTGRES_USER=${DB_USER:-postgres}
+      - POSTGRES_DB=${DB_DATABASE:-stacks-data-lake}
+      - POSTGRES_PORT=${DB_port:-5432}
+    volumes:
+      - ${APP_DATA_DIR}/data/${DB_HOST}:/var/lib/postgresql/data
+      - ./src/database/migration.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      default:
+        ipv4_address: $APP_ALEX_DB_IP
+
+  alexandria-indexer:
+    image: ceramicwhite/alexandria-indexer:${ALEXANDRIA_INDEXER_VERSION:-latest}
+    restart: on-failure
+    env_file:
+      - ${APP_DATA_DIR}/data/.env
+    networks:
+      - default
+    depends_on:
+      - postgres
+
+  graphql-engine:
+    image: hasura/graphql-engine:latest
+    restart: on-failure
+    env_file:
+      - ${APP_DATA_DIR}/data/.env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      default:
+        ipv4_address: $APP_ALEX_GRAPHQL_IP
