@@ -21,5 +21,5 @@ gallery:
   - https://i.imgur.com/yyVG0Jb.jpeg
 path: ""
 defaultUsername: ""
-defaultPassword: ""
+deterministicPassword: true
 torOnly: false
