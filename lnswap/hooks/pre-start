@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+CONFIG="${UMBREL_ROOT}/app-data/lnswap/data/boltz.conf"
+
+CERT="${UMBREL_ROOT}/app-data/lightning/data/lnd/tls.cert"
+MACAROON="${UMBREL_ROOT}app-data/lightning/data/lnd/data/chain/bitcoin/${APP_BITCOIN_NETWORK}/admin.macaroon"
+
+set -e
+
+     sed -i  -e "s@CERT-PATH@$CERT@" \
+             -e "s@MACROON-PATH@$MACAROON@" "$CONFIG"
