@@ -1,5 +1,5 @@
 version: "3.7"
-# In the future want to add a dashboard page with gotty showing node stats for now just expose the api without auth
+# In the future want to add a dashboard page with gotty showing node stats, for now just expose the api
 services:
   app_proxy:
     environment:
@@ -9,7 +9,7 @@ services:
 
   stacks-blockchain:
     image: ceramicwhite/stacks-blockchain:latest
-    # Waiting for wileyj to post an image running as non-root
+    # Waiting for wileyj to post a build running as non-root
     #user: "1000:1000"
     init: true
     restart: on-failure
@@ -35,7 +35,7 @@ services:
     image: ceramicwhite/stacks-blockchain-api:latest
     init: true
     restart: on-failure
-    stop_grace_period: 5m
+    stop_grace_period: 10m
     #user: "1000:1000"
     environment:
       NODE_ENV: production
@@ -73,7 +73,7 @@ services:
   postgres:
     image: postgres:14-alpine
     restart: on-failure
-    stop_grace_period: 5m
+    stop_grace_period: 10m
     volumes:
       - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
     environment:

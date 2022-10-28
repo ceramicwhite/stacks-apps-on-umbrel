@@ -14,7 +14,7 @@ dependencies:
   - stacks-blockchain
 repo: https://github.com/hirosystems/explorer
 support: https://discord.gg/XyZBbYh3kT
-port: 3997
+port: 4009
 gallery:
   - https://i.imgur.com/dQ90Qi4.jpg
   - https://i.imgur.com/p2k0NUc.jpg

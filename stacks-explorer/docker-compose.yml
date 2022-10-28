@@ -4,22 +4,26 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: stacks-stacks-explorer-1
+      APP_HOST: $APP_STACKS_EXPLORER_IP
       APP_PORT: 3000
 
   stacks-explorer:
-    image: ceramicwhite/stacks-explorer:v1.50.0@sha256:a38b4e14369e3f5513eaec890f8bbb8cd3a3dba37af6176def977a936bd8942f
+    image: ceramicwhite/stacks-explorer:latest-umbrel
     init: true
     restart: on-failure
     user: "1000:1000"
     stop_grace_period: 1m
-    environment:
-      NEXT_PUBLIC_MAINNET_API_SERVER: http://${APP_STACKS_API_IP}:${APP_STACKS_API_PORT}
-      NEXT_PUBLIC_TESTNET_API_SERVER: http://${APP_STACKS_API_IP}:${APP_STACKS_API_PORT}
-      NEXT_PUBLIC_LEGACY_EXPLORER_API_SERVER: https://explorer-api.legacy.blockstack.org
-      NEXT_PUBLIC_DEPLOYMENT_URL: ${DEVICE_HOSTNAME:-umbrel}.local:3997
-      NEXT_PUBLIC_MAINNET_ENABLED: "true"
-      NEXT_PUBLIC_DEFAULT_POLLING_INTERVAL: "10000"
-      NODE_ENV: production
+    # Hiro Devs scuffed Next env vars so they are hardcoded into docker image on hub for now
+    #environment:
+      #NEXT_PUBLIC_MAINNET_API_SERVER: http://${APP_STACKS_API_IP}:${APP_STACKS_API_PORT}
+      #NEXT_PUBLIC_TESTNET_API_SERVER: http://${APP_STACKS_API_IP}:${APP_STACKS_API_PORT}
+      #NEXT_PUBLIC_LEGACY_EXPLORER_API_SERVER: https://explorer-api.legacy.blockstack.org
+      #NEXT_PUBLIC_DEPLOYMENT_URL: ${DEVICE_HOSTNAME:-umbrel}.local:4009
+      #NEXT_PUBLIC_MAINNET_ENABLED: "true"
+      #NEXT_PUBLIC_DEFAULT_POLLING_INTERVAL: "10000"
+      #NODE_ENV: production
     ports:
       - 3000:3000
+    networks:
+      default:
+        ipv4_address: $APP_STACKS_BLOCKCHAIN_IP
