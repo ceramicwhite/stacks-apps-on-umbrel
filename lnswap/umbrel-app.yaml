@@ -3,7 +3,7 @@ id: stacks-lnswap
 category: Swaps
 name: LNSwap (LN-STX Bridge)
 version: "0.0.1"
-icon: https://svgshare.com/i/nez.svg
+icon: https://cloudflare-ipfs.com/ipfs/QmWTPJ941gS3tRrzUPFgjiLTzxCQcJQZ3ACYbG6iNFahts/lnswap.svg
 tagline: Swap Lightning Network BTC for Stacks (STX) tokens
 description: >-
   This is a light client to interface with lnstxbridge to facilitate submarine/atomic swaps between Lightning Network/onchain BTC <-> STX/USDA/(Any SIP10 token) on Stacks
