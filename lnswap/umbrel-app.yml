@@ -1,0 +1,23 @@
+manifestVersion: 1
+id: stacks-lnswap
+category: Swaps
+name: LNSwap
+version: "1.1.1"
+icon: https://svgshare.com/i/nj7.svg
+tagline: Earn fees for providing liquidity to lnstxbridge 
+description: >-
+  This is a light client to interface with lnstxbridge to facilitate submarine/atomic swaps between Lightning Network/onchain BTC to STX/USDA/Any SIP10 token on Stacks.
+developer: PseudoZach
+website: https://www.lnswap.org/
+submitter: Jasper
+dependencies:
+  - lightning
+repo: https://github.com/lnswap/lnstxbridge-client
+support: https://discord.gg/sFy5cpZt6Q
+port: 9010
+gallery:
+  - https://i.imgur.com/sVODumP.jpg
+path: ""
+defaultUsername: admin
+defaultPassword: true
+torOnly: false

@@ -3,8 +3,8 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: $APP_LNSWAP_DASHBOARD_IP
-      APP_PORT: $APP_LNSWAP_DASHBOARD_PORT
+      APP_HOST: $APP_LNSWAP_APP_IP
+      APP_PORT: "3000"
 
   api:
     image: ceramicwhite/lnstxbridge-client:1.1.1@sha256:c9dca3baf4aa8e005ef2851e0af1817646521975b96772defa03ac83e
@@ -16,7 +16,7 @@ services:
       - $APP_LNSWAP_API_PORT:$APP_LNSWAP_API_PORT
     volumes:
       - ${APP_DATA_DIR}/data:/root/.lnstx-client/
-      - ${LND_DATA_DIR}:/lnd:ro
+      - ${APP_LIGHTNING_NODE_DATA_DIR}:/lnd:ro
     environment:
       BITCOIN_IP: $APP_BITCOIN_IP
       BITCOIN_RPC_PORT: $APP_BITCOIN_NODE_IP
@@ -35,16 +35,15 @@ services:
         ipv4_address: $APP_LNSWAP_API_IP
 
   dashboard:
-    container_name: lnstxbridge-dashboard
     image: pseudozach/lnstxbridge-dashboard:1.0.1@sha256:4029fa0ae8b2e82858bd4e59c043db3e14292c2ed7196037675e2693d3a6ebe9
     user: 1000:1000
     restart: on-failure
     init: true
     stop_grace_period: 1m
     ports:
-      - $APP_LNSWAP_DASHBOARD_PORT:3000
+      - "3000:3000"
     environment:
-      NEXT_PUBLIC_BACKEND_URL: "$APP_LNSWAP_API_IP:9008"
+      NEXT_PUBLIC_BACKEND_URL: "$APP_LNSWAP_API_IP:$APP_LNSWAP_API_PORT"
     networks:
       default:
-        ipv4_address: $APP_LNSWAP_DASHBOARD_IP
+        ipv4_address: $APP_LNSWAP_APP_IP
