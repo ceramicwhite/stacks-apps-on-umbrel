@@ -6,12 +6,12 @@ version: "1.56.0"
 icon: https://svgshare.com/i/nfH.svg
 tagline: Explore transactions and accounts on the Stacks blockchain. 
 description: >-
+  THIS REQUIRES THE STACKS BLOCKCHAIN TO BE RUNNING either version is fine
   Explore transactions and accounts on the Stacks blockchain. Clone any contract and experiment in your browser with the Explorer sandbox.
 developer: Hiro Systems
 website: https://www.hiro.so/stacks-explorer
 submitter: Jasper
-dependencies:
-  - stacks-blockchain
+dependencies: []
 repo: https://github.com/hirosystems/explorer
 support: https://discord.gg/XyZBbYh3kT
 port: 4009
