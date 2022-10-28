@@ -1,25 +1,23 @@
 manifestVersion: 1
 id: stacks-lnswap
 category: Swaps
-name: LNSwap (LN-STX Bridge)
-version: "0.0.1"
+name: LNSwap (LN to STX Bridge)
+version: "1.1.1"
 icon: https://cloudflare-ipfs.com/ipfs/QmWTPJ941gS3tRrzUPFgjiLTzxCQcJQZ3ACYbG6iNFahts/lnswap.svg
 tagline: Swap Lightning Network BTC for Stacks (STX) tokens
 description: >-
   This is a light client to interface with lnstxbridge to facilitate submarine/atomic swaps between Lightning Network/onchain BTC <-> STX/USDA/(Any SIP10 token) on Stacks
 developer: PseudoZach
-website: https://docs.lnswap.org/quick-start
+website: https://www.lnswap.org/
 submitter: Jasper
 dependencies:
   - stacks-blockchain
   - lightning
-repo: https://github.com/pseudozach/lnstxbridge-client
-support: https://discord.gg/XyZBbYh3kT
+repo: https://github.com/lnswap/lnstxbridge-client
+support: https://discord.gg/sFy5cpZt6Q
 port: 9009
 gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/sVODumP.jpg
 path: ""
 defaultUsername: ""
 deterministicPassword: true
