@@ -10,8 +10,7 @@ description: >-
 developer: Stacks Governance
 website: https://stacks.co/
 submitter: Jasper
-dependencies:
-  - bitcoin
+dependencies: []
 repo: https://github.com/stacks-network/stacks-blockchain
 support: https://discord.gg/XyZBbYh3kT
 port: 3998

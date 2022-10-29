@@ -9,11 +9,12 @@ services:
 
   stacks-blockchain:
     image: ceramicwhite/stacks-blockchain:latest
-    # Waiting for wileyj to post a build running as non-root
-    #user: "1000:1000"
+    #user: "1000:1000" 
     init: true
     restart: on-failure
-    stop_grace_period: 10m
+    stop_grace_period: 15m30s
+    env_file:
+      - ${APP_DATA_DIR}/data/config/setup.env
     command:
       [
         "/bin/stacks-node",
@@ -25,38 +26,22 @@ services:
       - $APP_STACKS_CORE_RPC_PORT:$APP_STACKS_CORE_RPC_PORT
       - $APP_STACKS_CORE_P2P_PORT:$APP_STACKS_CORE_P2P_PORT
     volumes:
-      - ${APP_DATA_DIR}/data/stacks-blockchain:/root/stacks-blockchain/data
       - ${APP_DATA_DIR}/data/config:/src/stacks-blockchain
+      - ${APP_DATA_DIR}/data/stacks-blockchain:/root/stacks-blockchain/data
     networks:
       default:
         ipv4_address: $APP_STACKS_BLOCKCHAIN_IP
+    depends_on:
+      - stacks-blockchain-api
 
   stacks-blockchain-api:
     image: ceramicwhite/stacks-blockchain-api:latest
     init: true
     restart: on-failure
-    stop_grace_period: 10m
+    stop_grace_period: 15m30s
     #user: "1000:1000"
-    environment:
-      NODE_ENV: production
-      PG_HOST: postgres
-      PG_PORT: $APP_STACKS_DB_PORT
-      PG_USER: postgres
-      PG_PASSWORD: postgres
-      PG_DATABASE: postgres
-      STACKS_CHAIN_ID: 0x00000001
-      V2_POX_MIN_AMOUNT_USTX: 90000000260
-      STACKS_CORE_EVENT_PORT: $APP_STACKS_CORE_EVENT_PORT
-      STACKS_CORE_EVENT_HOST: 0.0.0.0
-      STACKS_BLOCKCHAIN_API_PORT: $APP_STACKS_API_PORT
-      STACKS_BLOCKCHAIN_API_HOST: 0.0.0.0
-      STACKS_BLOCKCHAIN_API_DB: pg
-      STACKS_CORE_RPC_HOST: stacks-blockchain
-      STACKS_CORE_RPC_PORT: $APP_STACKS_CORE_RPC_PORT
-      STACKS_API_ENABLE_FT_METADATA: 1
-      STACKS_API_ENABLE_NFT_METADATA: 1
-      BNS_IMPORT_DIR: /bns-data
-      STACKS_EXPORT_EVENTS_FILE: /tmp/event-replay/stacks-node-events.tsv
+    env_file:
+      - ${APP_DATA_DIR}/data/config/setup.env
     command: ["npm", "run", "start"]
     volumes:
       - ${APP_DATA_DIR}/data/bns-data:/bns-data
@@ -73,14 +58,13 @@ services:
   postgres:
     image: postgres:14-alpine
     restart: on-failure
-    stop_grace_period: 10m
+    stop_grace_period: 15m30s
     volumes:
       - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
-      POSTGRES_PORT: $APP_STACKS_DB_PORT
+      - POSTGRES_PASSWORD=${PG_PASSWORD:-postgres}
+    env_file:
+      - ${APP_DATA_DIR}/data/config/setup.env
     networks:
       default:
         ipv4_address: $APP_STACKS_DB_IP

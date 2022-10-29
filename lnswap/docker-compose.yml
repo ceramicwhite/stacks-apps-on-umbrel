@@ -7,7 +7,7 @@ services:
       APP_PORT: "3000"
 
   api:
-    image: ceramicwhite/lnstxbridge-client:1.1.1@sha256:c9dca3baf4aa8e005ef2851e0af1817646521975b96772defa03ac83e
+    image: ceramicwhite/lnstxbridge-client:1.1.1
     restart: on-failure
     stop_grace_period: 1m
     user: 1000:1000
