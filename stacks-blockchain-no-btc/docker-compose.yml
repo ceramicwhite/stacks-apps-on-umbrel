@@ -1,11 +1,24 @@
 version: "3.7"
-# In the future want to add a dashboard page with gotty showing node stats, for now just expose the api
 services:
   app_proxy:
     environment:
-      APP_HOST: $APP_STACKS_API_IP
-      APP_PORT: 3999
-      PROXY_AUTH_WHITELIST: "/api/*"
+      APP_HOST: $APP_STACKS_STATUS_IP
+      APP_PORT: 3000
+      PROXY_AUTH_WHITELIST: "/stacks-blockchain-api/*"
+
+  stacks-status:
+    image: ceramicwhite/stacks-status:latest
+    user: 1000:1000
+    init: true
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      - STACKS_API_HOST=http://$APP_STACKS_API_IP:$APP_STACKS_API_PORT
+    networks:
+      default:
+        ipv4_address: $APP_STACKS_STATUS_IP
+    depends_on:
+      - stacks-blockchain-api
 
   stacks-blockchain:
     image: ceramicwhite/stacks-blockchain:latest
@@ -35,7 +48,7 @@ services:
       - stacks-blockchain-api
 
   stacks-blockchain-api:
-    image: ceramicwhite/stacks-blockchain-api:latest
+    image: ceramicwhite/stacks-blockchain-api:v6.1.1
     init: true
     restart: on-failure
     stop_grace_period: 15m30s
