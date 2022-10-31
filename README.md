@@ -1,17 +1,11 @@
-## Umbrel Community App Store Template
+## Stacks Community App Store for Umbrel
 
-This repository is a template to create an Umbrel Community App Store. These additional app stores allow developers to distribute applications without submitting to the [Official Umbrel App Store](https://github.com/getumbrel/umbrel-apps).
+### Add the Stacks Appstore to your Umbrel
 
-### Technical Details
-
-The `umbrel-app-store.yml` file defines two important properties:
-- `id` - This is used as a prefix for all apps within the community app store. You **MUST** prefix your application id with your app store ID. For example, this template defines `sparkles` as a community app store ID and we have a `hello world` app. The app ID therefore should be: `sparkles-hello-world`
-- `name` - This name appears within the Umbrel user interface when users explore apps within these community app stores.
-
-
-### Testing
-
-To test your community app store, you can add this repository through the Umbrel user interface as shown in the following demo:
+- Open the Appstore from your Umbrel Dashboard
+- Click the three dots in the top right and select *Community App Store*
+- Paste https://github.com/ceramicwhite/stacks-apps-on-umbrel.git and click ADD
+- Click Open and install desired Stacks apps
 
 
 https://user-images.githubusercontent.com/10330103/197889452-e5cd7e96-3233-4a09-b475-94b754adc7a3.mp4
@@ -19,19 +13,19 @@ https://user-images.githubusercontent.com/10330103/197889452-e5cd7e96-3233-4a09-
 
 Alternatively, you can use the Umbrel CLI as described below.
 
-To add an app store:
+To add the Stacks app store:
 ```
-sudo ~/umbrel/scripts/repo add https://github.com/getumbrel/umbrel-community-app-store.git
+sudo ~/umbrel/scripts/repo add https://github.com/ceramicwhite/stacks-apps-on-umbrel.git
 
 sudo ~/umbrel/scripts/repo update
 ```
 
-To install an app from the app store
+To install an app from the Stacks app store
 ```
-sudo ~/umbrel/scripts/app install sparkles-hello-world
+sudo ~/umbrel/scripts/app install stacks-blockchain
 ```
 
-To remove an app store:
+To remove the Stacks app store:
 ```
-sudo ~/umbrel/scripts/repo remove https://github.com/getumbrel/umbrel-community-app-store.git
+sudo ~/umbrel/scripts/repo remove https://github.com/ceramicwhite/stacks-apps-on-umbrel.git
 ```
