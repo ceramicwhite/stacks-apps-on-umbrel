@@ -13,5 +13,7 @@ MACAROON="${UMBREL_ROOT}app-data/lightning/data/lnd/data/chain/bitcoin/${APP_BIT
 
 set -e
 
-     sed -i  -e "s@CERT-PATH@$CERT@" \
+     sed -i  -e "s@APP_BITCOIN_RPC_USER@$APP_BITCOIN_RPC_USER@" \
+             -e "s@APP_BITCOIN_RPC_PASS@$APP_BITCOIN_RPC_PASS@" \
+             -e "s@CERT-PATH@$CERT@" \
              -e "s@MACAROON-PATH@$MACAROON@" "$CONFIG"
