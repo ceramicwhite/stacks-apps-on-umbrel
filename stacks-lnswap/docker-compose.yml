@@ -8,7 +8,7 @@ services:
 
   api:
     image: pseudozach/lnstxbridge-client:1.1.2
-    #restart: on-failure
+    restart: on-failure
     stop_grace_period: 1m
     #user: 1000:1000
     init: true
@@ -35,15 +35,16 @@ services:
         ipv4_address: $APP_LNSWAP_API_IP
 
   dashboard:
-    image: pseudozach/lnstxbridge-dashboard:1.0.1@sha256:4029fa0ae8b2e82858bd4e59c043db3e14292c2ed7196037675e2693d3a6ebe9
+    image: ceramicwhite/lnstxbridge-dashboard:1.1.2@sha256:419eafaed53f3b5b9625a5d6e2190534a56531c0fa380dd531a53ad7131a306c
     #user: 1000:1000
     restart: on-failure
     init: true
     stop_grace_period: 1m
-    ports:
-      - $APP_LNSWAP_APP_PORT:$APP_LNSWAP_APP_PORT
     environment:
       NEXT_PUBLIC_BACKEND_URL: "$APP_LNSWAP_API_IP:$APP_LNSWAP_API_PORT"
+      PORT: $APP_LNSWAP_APP_PORT
+    ports:
+      - $APP_LNSWAP_APP_PORT:$APP_LNSWAP_APP_PORT
     depends_on:
       - api
     networks:

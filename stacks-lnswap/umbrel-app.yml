@@ -16,7 +16,7 @@ dependencies:
   - stacks-blockchain
 repo: https://github.com/lnswap/lnstxbridge-client
 support: https://discord.gg/sFy5cpZt6Q
-port: 9010
+port: 9011
 gallery:
   - https://i.imgur.com/Z3qrvud.jpg
 path: ""
