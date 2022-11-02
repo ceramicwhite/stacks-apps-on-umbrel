@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: stacks-stacks-explorer
+id: stacks-explorer
 category: Explorer
 name: Stacks Explorer
 version: "1.56.0"
@@ -7,20 +7,26 @@ version: "1.56.0"
 icon : https://stxsats.mypinata.cloud/ipfs/QmeqmRb9VXPzfPFdSdQ99ywKgaprKa5gA9THwMwEMzAgvZ/stacks-explorer.svg
 tagline: Explore transactions and accounts on the Stacks blockchain. 
 description: >-
-  THIS REQUIRES THE STACKS BLOCKCHAIN TO BE RUNNING either version is fine
-  Explore transactions and accounts on the Stacks blockchain. Clone any contract and experiment in your browser with the Explorer sandbox.
+  Explore transactions, accounts and smart contracts on Stacks. Experiment with your contracts on-chain, in real time.
+
+  - See account balances and transaction history, making it easier to read, audit and interpret on-chain activity.
+
+  - Quickly check your transaction status with helpful labels and tags.
+  
+  - Deploy contracts and execute their functions via a simple user interface, changing parameters on the fly.
 developer: Hiro Systems
 website: https://www.hiro.so/stacks-explorer
 submitter: Jasper
-dependencies: []
+dependencies: 
+  - stacks-blockchain
 repo: https://github.com/hirosystems/explorer
 support: https://discord.gg/XyZBbYh3kT
 port: 4009
 gallery:
-  - https://i.imgur.com/dQ90Qi4.jpg
-  - https://i.imgur.com/p2k0NUc.jpg
-  - https://i.imgur.com/gb34qps.jpg
-  - https://i.imgur.com/Etfeo54.jpg
+  - https://i.imgur.com/oyB3HTc.jpg
+  - https://i.imgur.com/UTHTP3l.jpg
+  - https://i.imgur.com/ESBUC9l.jpg
+  - https://i.imgur.com/GRnsGFQ.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""

@@ -8,7 +8,7 @@ services:
 
   api:
     image: pseudozach/lnstxbridge-client:1.1.2
-    restart: on-failure
+    #restart: on-failure
     stop_grace_period: 1m
     #user: 1000:1000
     init: true
@@ -28,7 +28,7 @@ services:
       BITCOIN_ZMQ_HASHBLOCK_PORT: $APP_BITCOIN_ZMQ_HASHBLOCK_PORT
       LND_IP: $APP_LIGHTNING_IP
       LND_GRPC_PORT: $APP_LIGHTNING_NODE_GRPC_PORT
-      APP_PASSWORD: ${APP_PASSWORD}
+      APP_PASSWORD: "moneyprintergobrrr"
       APP_HIDDEN_SERVICE: ${APP_HIDDEN_SERVICE}
     networks:
       default:

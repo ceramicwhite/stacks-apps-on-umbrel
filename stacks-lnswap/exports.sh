@@ -9,11 +9,14 @@ export APP_LNSWAP_APP_PORT="9010"
 CONFIG="${UMBREL_ROOT}/app-data/stacks-lnswap/data/boltz.conf"
 
 CERT="${UMBREL_ROOT}/app-data/lightning/data/lnd/tls.cert"
-MACAROON="${UMBREL_ROOT}app-data/lightning/data/lnd/data/chain/bitcoin/${APP_BITCOIN_NETWORK}/admin.macaroon"
+MACAROON="${UMBREL_ROOT}/app-data/lightning/data/lnd/data/chain/bitcoin/${APP_BITCOIN_NETWORK}/admin.macaroon"
 
 set -e
 
      sed -i  -e "s@APP_BITCOIN_RPC_USER@$APP_BITCOIN_RPC_USER@" \
              -e "s@APP_BITCOIN_RPC_PASS@$APP_BITCOIN_RPC_PASS@" \
+             -e "s@APP_BITCOIN_NODE_IP@$APP_BITCOIN_NODE_IP@" \
+             -e "s@APP_LIGHTNING_IP@$APP_LIGHTNING_IP@" \
+             -e "s@DEVICE-NAME@$DEVICE_HOSTNAME@" \
              -e "s@CERT-PATH@$CERT@" \
              -e "s@MACAROON-PATH@$MACAROON@" "$CONFIG"
