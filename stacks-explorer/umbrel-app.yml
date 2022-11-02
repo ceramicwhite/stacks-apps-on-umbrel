@@ -9,10 +9,13 @@ tagline: Explore transactions and accounts on the Stacks blockchain.
 description: >-
   Explore transactions, accounts and smart contracts on Stacks. Experiment with your contracts on-chain, in real time.
 
+
   - See account balances and transaction history, making it easier to read, audit and interpret on-chain activity.
+
 
   - Quickly check your transaction status with helpful labels and tags.
   
+
   - Deploy contracts and execute their functions via a simple user interface, changing parameters on the fly.
 developer: Hiro Systems
 website: https://www.hiro.so/stacks-explorer

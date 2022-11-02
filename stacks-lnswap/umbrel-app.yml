@@ -13,6 +13,7 @@ website: https://www.lnswap.org/
 submitter: Jasper
 dependencies:
   - lightning
+  - stacks-blockchain
 repo: https://github.com/lnswap/lnstxbridge-client
 support: https://discord.gg/sFy5cpZt6Q
 port: 9010

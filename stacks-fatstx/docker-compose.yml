@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: stacks-fatstx_1
+      APP_PORT: $APP_STACKS_FATSTX_PORT
+  web:
+    image: ceramicwhite/fatstx:latest@sha256:53435e7f87f7b0e2ad2bcf063a21d9b1bf583b89f3a9508f270ffc5b3a001f24
+    init: true
+    restart: on-failure
+    #user: "1000:1000"
+    stop_grace_period: 1m
+    environment:
+      - STACKS_BLOCKCHAIN_API_URL=http://10.21.21.98:3999
+      - PORT=$APP_STACKS_FATSTX_PORT
+    ports:
+      - $APP_STACKS_FATSTX_PORT:$APP_STACKS_FATSTX_PORT
+
+
