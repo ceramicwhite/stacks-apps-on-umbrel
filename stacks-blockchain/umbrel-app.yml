@@ -3,11 +3,17 @@ id: stacks-blockchain
 category: Stacks
 name: Stacks Node
 version: "2.05.0.5.1"
-#icon: https://svgshare.com/i/nez.svg
-icon: https://stxsats.mypinata.cloud/ipfs/QmTqAuRGEBdF1wziHtDJZKYiq11Fg2NRh42SZGN6v4fGR2/stacks-stx-logo.svg
+icon: https://cloudflare-ipfs.com/ipfs/QmTqAuRGEBdF1wziHtDJZKYiq11Fg2NRh42SZGN6v4fGR2/stacks-stx-logo.svg
 tagline: Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. 
 description: >-
-  Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. Stacks 2.0 implements Proof of Transfer (PoX) mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Stacks (STX) miners write new blocks on the separate Stacks blockchain. With PoX there is no need to modify Bitcoin to enable smart contracts and apps around it. See this page for more details and resources.
+  - Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. 
+  - Stacks 2.0 implements Proof of Transfer (PoX) mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Stacks (STX) miners write new blocks on the separate Stacks blockchain. 
+  With PoX there is no need to modify Bitcoin to enable smart contracts and apps around it. See this page for more details and resources.
+
+  - Backed by your local bitcoin Node
+
+
+  - Connect your Web and Desktop wallet to your local API (http://umbrel.local:3999)
 developer: Stacks Governance
 website: https://stacks.co/
 submitter: Jasper
@@ -18,6 +24,7 @@ support: https://discord.gg/XyZBbYh3kT
 port: 3998
 gallery:
   - https://i.imgur.com/ozTHpjG.jpg
+  - https://i.imgur.com/MoN2iX0.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
