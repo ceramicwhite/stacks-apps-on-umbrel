@@ -30,16 +30,17 @@ services:
       LND_GRPC_PORT: $APP_LIGHTNING_NODE_GRPC_PORT
       APP_PASSWORD: "moneyprintergobrrr"
       APP_HIDDEN_SERVICE: ${APP_HIDDEN_SERVICE}
+      APP_PORT: $APP_LNSWAP_API_PORT
     networks:
       default:
         ipv4_address: $APP_LNSWAP_API_IP
 
   dashboard:
-    image: ceramicwhite/lnstxbridge-dashboard:1.1.2@sha256:419eafaed53f3b5b9625a5d6e2190534a56531c0fa380dd531a53ad7131a306c
-    #user: 1000:1000
+    image: ceramicwhite/lnstxbridge-dashboard:1.1.2@sha256:3c6ac076fe77354892ababff5f09456dc78b7c2bed50545977d42137a88155ad
     restart: on-failure
-    init: true
     stop_grace_period: 1m
+    #user: 1000:1000
+    init: true
     environment:
       NEXT_PUBLIC_BACKEND_URL: "$APP_LNSWAP_API_IP:$APP_LNSWAP_API_PORT"
       PORT: $APP_LNSWAP_APP_PORT
