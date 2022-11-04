@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: $APP_MULTISAFE_IP
+      APP_PORT: $APP_MULTISAFE_PORT
+
+  web:
+    image: ceramicwhite/multisafe-ui:latest@sha256:f86ede06a6640cc47201a391c7fe14bf5929b0011eefd802edf58de8db61c90d
+    restart: on-failure
+    stop_grace_period: 1m
+    user: 1000:1000
+    init: true
+    environment:
+      REACT_STACKS_NETWORK_API: http://${DEVICE_HOSTNAME}.local:${APP_STACKS_API_PORT}
+      PORT: $APP_MULTISAFE_PORT
+    ports:
+      - $APP_MULTISAFE_PORT:$APP_MULTISAFE_PORT
+    networks:
+      default:
+        ipv4_address: $APP_MULTISAFE_IP
