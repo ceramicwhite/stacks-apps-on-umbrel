@@ -9,6 +9,8 @@ export APP_STACKS_API_PORT="3999"
 export APP_STACKS_DB_IP="10.21.21.97"
 export APP_STACKS_DB_PORT="5432"
 export APP_STACKS_STATUS_IP="10.21.21.101"
+export APP_STACKS_DATA_DIR="${EXPORTS_APP_DIR}/data/stacks-blockchain/mainnet"
+
 
 #!/usr/bin/env bash
 

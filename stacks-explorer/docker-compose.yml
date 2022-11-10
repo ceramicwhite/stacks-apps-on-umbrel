@@ -7,20 +7,21 @@ services:
       APP_PORT: $APP_STACKS_EXPLORER_PORT
 
   web:
-    image: ceramicwhite/stacks-explorer:1.41.0@sha256:d4271ce5c8a108648b8eedecc003d7a3116f8c3e5e9bc99954df8af1fe8cd3f3
+    image: ceramicwhite/stacks-explorer:1.41.0-umbrel@sha256:2c6982fffac7158d0ad853215b1071e8b525bed413e773aa8254ec91eeb6a193
     init: true
     restart: on-failure
     user: "1000:1000"
     stop_grace_period: 1m
     environment:
-      NEXT_PUBLIC_MAINNET_API_SERVER: http://localhost:${APP_STACKS_API_PORT}
-      NEXT_PUBLIC_TESTNET_API_SERVER: https://stacks-node-api.testnet.stacks.co
-      NEXT_PUBLIC_LEGACY_EXPLORER_API_SERVER: https://explorer-api.legacy.blockstack.org
-      NEXT_PUBLIC_DEPLOYMENT_URL: http://${DEVICE_HOSTNAME}.local:4009
-      NEXT_PUBLIC_MAINNET_ENABLED: "true"
-      NEXT_PUBLIC_DEFAULT_POLLING_INTERVAL: "10000"
-      NODE_ENV: production
-      NEXT_MEMPOOL_SPACE_URL: "http://${DEVICE_HOSTNAME}.local:${APP_MEMPOOL_PORT:-3006}"
+      #Hiro scuffed the env vars so running a hardcoded prebuilt version
+      #NEXT_PUBLIC_MAINNET_API_SERVER: http://localhost:${APP_STACKS_API_PORT}
+      #NEXT_PUBLIC_TESTNET_API_SERVER: https://stacks-node-api.testnet.stacks.co
+      #NEXT_PUBLIC_LEGACY_EXPLORER_API_SERVER: https://explorer-api.legacy.blockstack.org
+      #NEXT_PUBLIC_DEPLOYMENT_URL: http://${DEVICE_HOSTNAME}.local:4009
+      #NEXT_PUBLIC_MAINNET_ENABLED: "true"
+      #NEXT_PUBLIC_DEFAULT_POLLING_INTERVAL: "10000"
+      #NEXT_MEMPOOL_SPACE_URL: "http://${DEVICE_HOSTNAME}.local:${APP_MEMPOOL_PORT:-3006}"
+      #NODE_ENV: production
       PORT: $APP_STACKS_EXPLORER_PORT
     ports:
       - $APP_STACKS_EXPLORER_PORT:$APP_STACKS_EXPLORER_PORT

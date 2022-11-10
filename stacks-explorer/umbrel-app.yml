@@ -21,6 +21,7 @@ website: https://www.hiro.so/stacks-explorer
 submitter: Jasper
 dependencies: 
   - stacks-blockchain
+  - mempool
 repo: https://github.com/hirosystems/explorer
 support: https://discord.gg/XyZBbYh3kT
 port: 4009
