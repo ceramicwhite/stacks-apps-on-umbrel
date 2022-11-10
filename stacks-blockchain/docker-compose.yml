@@ -33,14 +33,14 @@ services:
         "/bin/stacks-node",
         "start",
         "--config",
-        "/src/stacks-blockchain/Config.toml",
+        "/app/config/Config.toml",
       ]
     ports:
       - $APP_STACKS_CORE_RPC_PORT:$APP_STACKS_CORE_RPC_PORT
       - $APP_STACKS_CORE_P2P_PORT:$APP_STACKS_CORE_P2P_PORT
     volumes:
-      - ${APP_DATA_DIR}/data/config:/src/stacks-blockchain
-      - ${APP_DATA_DIR}/data/stacks-blockchain:/root/stacks-blockchain/data
+      - ${APP_DATA_DIR}/data/config:/app/config
+      - ${APP_DATA_DIR}/data/stacks-blockchain:/app/stacks-blockchain/data
     networks:
       default:
         ipv4_address: $APP_STACKS_BLOCKCHAIN_IP
@@ -48,7 +48,7 @@ services:
       - stacks-blockchain-api
 
   stacks-blockchain-api:
-    image: ceramicwhite/stacks-blockchain-api:v6.1.1
+    image: ceramicwhite/stacks-blockchain-api:v6.1.1@sha256:3986759e01c63897411b18b42834a7c60299c6e54a99a57ba9185fd6da3ca998
     init: true
     restart: on-failure
     stop_grace_period: 15m30s
