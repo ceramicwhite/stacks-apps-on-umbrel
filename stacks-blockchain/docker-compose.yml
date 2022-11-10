@@ -7,11 +7,11 @@ services:
       PROXY_AUTH_WHITELIST: "/stacks-blockchain-api/*"
 
   stacks-status:
-    image: ceramicwhite/stacks-status:latest
+    image: ceramicwhite/stacks-status:latest@sha256:c32b2203269828e6ed06cbda5d190a4f2154d2923236cb02f3fcaeff2417cf32
     user: 1000:1000
     init: true
     restart: on-failure
-    stop_grace_period: 1m
+    stop_grace_period: 15m30s
     environment:
       - STACKS_API_HOST=http://$APP_STACKS_API_IP:$APP_STACKS_API_PORT
     networks:

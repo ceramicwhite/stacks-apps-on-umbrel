@@ -36,10 +36,10 @@ services:
         ipv4_address: $APP_LNSWAP_API_IP
 
   dashboard:
-    image: ceramicwhite/lnstxbridge-dashboard:1.1.2@sha256:3c6ac076fe77354892ababff5f09456dc78b7c2bed50545977d42137a88155ad
+    image: ceramicwhite/lnstxbridge-dashboard:latest@sha256:651cdf7f9aeb4b82f9775e5988af4f95efdeb54e98765a5fdd9063514c67d564
     restart: on-failure
     stop_grace_period: 1m
-    #user: 1000:1000
+    user: 1000:1000
     init: true
     environment:
       NEXT_PUBLIC_BACKEND_URL: "$APP_LNSWAP_API_IP:$APP_LNSWAP_API_PORT"
