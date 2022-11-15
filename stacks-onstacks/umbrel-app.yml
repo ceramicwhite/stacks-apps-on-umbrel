@@ -3,7 +3,7 @@ id: stacks-onstacks
 category: Explorer
 name: OnStacks
 version: "1.0.0"
-icon : https://cloudflare-ipfs.com/ipfs/Qmdft3AQoJe6xPCjraZzEZK1SMh4TqGxx7xAVR9x3XnJoy/onstacks.svg
+icon : https://cloudflare-ipfs.com/ipfs/QmR7bp65twj3LAR4jPKiAREAcb9xKj5oXU5rpN57nMvFdX/onstacks.svg
 tagline: Understand Stacks Mining & a Stacks Explorer
 description: >-
   Onstacks is the leading analytics provider for miners on the Stacks network. 
@@ -31,7 +31,7 @@ repo: https://github.com/Daemon-Technologies/Onstacks-client
 support: https://github.com/Daemon-Technologies/Onstacks-client/issues
 port: 6051
 gallery:
-  - https://cloudflare-ipfs.com/ipfs/Qmdft3AQoJe6xPCjraZzEZK1SMh4TqGxx7xAVR9x3XnJoy/onstacks.png
+  - https://cloudflare-ipfs.com/ipfs/QmR7bp65twj3LAR4jPKiAREAcb9xKj5oXU5rpN57nMvFdX/onstacks.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
