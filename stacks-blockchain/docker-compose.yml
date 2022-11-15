@@ -78,6 +78,8 @@ services:
       - POSTGRES_PASSWORD=${PG_PASSWORD:-postgres}
     env_file:
       - ${APP_DATA_DIR}/data/config/setup.env
+    ports:
+      - $APP_STACKS_DB_PORT:$APP_STACKS_DB_PORT
     networks:
       default:
         ipv4_address: $APP_STACKS_DB_IP
