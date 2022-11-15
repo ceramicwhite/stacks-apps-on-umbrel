@@ -19,8 +19,8 @@ description: >-
 
   - Track your mining performance and use live operational intelligence to help you outcompete other STX miners
 
-developer: Trust Machines
-website: https://multisafe.xyz/
+developer: Daemon Technologies
+website: https://www.onstacks.com/
 submitter: Jasper
 dependencies:
   - stacks-blockchain
