@@ -4,7 +4,7 @@ category: Explorer
 name: OnStacks
 version: "1.0.0"
 icon : https://cloudflare-ipfs.com/ipfs/QmR7bp65twj3LAR4jPKiAREAcb9xKj5oXU5rpN57nMvFdX/onstacks.svg
-tagline: Understand Stacks Mining & a Stacks Explorer
+tagline: Understand Stacks Mining & A Stacks Explorer
 description: >-
   Onstacks is the leading analytics provider for miners on the Stacks network. 
   Track, analyse, and get notifications (coming soon) on all mining related 
@@ -29,7 +29,7 @@ dependencies:
   #- ipfs-node # Not yet
 repo: https://github.com/Daemon-Technologies/Onstacks-client
 support: https://github.com/Daemon-Technologies/Onstacks-client/issues
-port: 6051
+port: 6054
 gallery:
   - https://cloudflare-ipfs.com/ipfs/QmR7bp65twj3LAR4jPKiAREAcb9xKj5oXU5rpN57nMvFdX/onstacks.jpg
 path: ""
