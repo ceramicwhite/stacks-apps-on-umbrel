@@ -1,0 +1,38 @@
+manifestVersion: 1
+id: stacks-onstacks
+category: Explorer
+name: OnStacks
+version: "1.0.0"
+icon : https://cloudflare-ipfs.com/ipfs/Qmdft3AQoJe6xPCjraZzEZK1SMh4TqGxx7xAVR9x3XnJoy/onstacks.svg
+tagline: Understand Stacks Mining & a Stacks Explorer
+description: >-
+  Onstacks is the leading analytics provider for miners on the Stacks network. 
+  Track, analyse, and get notifications (coming soon) on all mining related 
+  activies with Onstacks.
+
+
+  - Understand Stacks Mining
+
+
+  - A Stacks Explorer
+
+
+  - Track your mining performance and use live operational intelligence to help you outcompete other STX miners
+
+developer: Trust Machines
+website: https://multisafe.xyz/
+submitter: Jasper
+dependencies:
+  - stacks-blockchain
+  - mempool
+  #- bitcoin # Not yet
+  #- ipfs-node # Not yet
+repo: https://github.com/Daemon-Technologies/Onstacks-client
+support: https://github.com/Daemon-Technologies/Onstacks-client/issues
+port: 6051
+gallery:
+  - https://cloudflare-ipfs.com/ipfs/Qmdft3AQoJe6xPCjraZzEZK1SMh4TqGxx7xAVR9x3XnJoy/onstacks.png
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+torOnly: false

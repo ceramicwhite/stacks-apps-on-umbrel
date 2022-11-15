@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: $APP_ONSTACKS_IP
+      APP_PORT: $APP_ONSTACKS_PORT
+
+  web:
+    image: ceramicwhite/onstacks-client:v1.0.0@sha256:778d96779d39260fd3d3eea4c604582cd482a90e0cad11cbf9412344248ac214
+    restart: on-failure
+    stop_grace_period: 1m
+    user: 1000:1000
+    init: true
+    environment:
+      #Using daemon graphql endpoint for now until I add alexandria-indexer
+      #MINING_MONITOR_GRAPHQL: https://mining-importer.up.railway.app/v1/graphql \
+      STACKS_BLOCKCHAIN_API_URL: http://${DEVICE_HOSTNAME}.local:${APP_STACKS_API_PORT:-3999}
+      # The IPFS node available on the umbrel appstore is a memory hog so not worth it for now
+      #IPFS_GATEWAY_URL: https://ipfs.fleek.co/ipfs/
+      MEMPOOL_SPACE_URL: http://${DEVICE_HOSTNAME}.local:${APP_MEMPOOL_PORT}
+      PORT: $APP_ONSTACKS_PORT
+    ports:
+      - $APP_ONSTACKS_PORT:$APP_ONSTACKS_PORT
+    networks:
+      default:
+        ipv4_address: $APP_ONSTACKS_IP
