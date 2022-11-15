@@ -17,7 +17,7 @@ services:
       #MINING_MONITOR_GRAPHQL: https://mining-importer.up.railway.app/v1/graphql \
       STACKS_BLOCKCHAIN_API_URL: http://${DEVICE_HOSTNAME}.local:${APP_STACKS_API_PORT:-3999}
       # The IPFS node available on the umbrel appstore is a memory hog so not worth it for now
-      #IPFS_GATEWAY_URL: https://ipfs.fleek.co/ipfs/
+      IPFS_GATEWAY_URL: https://cloudflare-ipfs.com/ipfs/
       MEMPOOL_SPACE_URL: http://${DEVICE_HOSTNAME}.local:${APP_MEMPOOL_PORT}
       PORT: $APP_ONSTACKS_PORT
     ports:

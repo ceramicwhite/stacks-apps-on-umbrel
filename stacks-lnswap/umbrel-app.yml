@@ -3,7 +3,7 @@ id: stacks-lnswap
 category: Swaps
 name: LNSwap
 version: "1.1.2"
-icon : https://cloudflare-ipfs.com/ipfs/QmWTPJ941gS3tRrzUPFgjiLTzxCQcJQZ3ACYbG6iNFahts/lnswap.svg
+icon : https://stxsats.mypinata.cloud/ipfs/QmWTPJ941gS3tRrzUPFgjiLTzxCQcJQZ3ACYbG6iNFahts/lnswap.svg
 tagline: Earn fees for providing liquidity to lnstxbridge 
 description: >-
   This is a light client to interface with lnstxbridge to facilitate submarine/atomic swaps between Lightning Network/onchain BTC to STX/USDA/Any SIP10 token on Stacks.

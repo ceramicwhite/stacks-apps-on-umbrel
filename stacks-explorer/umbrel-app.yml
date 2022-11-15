@@ -3,7 +3,7 @@ id: stacks-explorer
 category: Explorer
 name: Stacks Explorer
 version: "1.56.0"
-icon : https://cloudflare-ipfs.com/ipfs/QmeqmRb9VXPzfPFdSdQ99ywKgaprKa5gA9THwMwEMzAgvZ/stacks-explorer.svg
+icon : https://stxsats.mypinata.cloud/ipfs/QmeqmRb9VXPzfPFdSdQ99ywKgaprKa5gA9THwMwEMzAgvZ/stacks-explorer.svg
 tagline: Explore transactions and accounts on the Stacks blockchain. 
 description: >-
   Explore transactions, accounts and smart contracts on Stacks. Experiment with your contracts on-chain, in real time.

@@ -3,7 +3,7 @@ id: stacks-blockchain
 category: Stacks
 name: Stacks Node
 version: "2.05.0.5.1"
-icon: https://cloudflare-ipfs.com/ipfs/QmTqAuRGEBdF1wziHtDJZKYiq11Fg2NRh42SZGN6v4fGR2/stacks-stx-logo.svg
+icon: https://stxsats.mypinata.cloud/ipfs/QmTqAuRGEBdF1wziHtDJZKYiq11Fg2NRh42SZGN6v4fGR2/stacks-stx-logo.svg
 tagline: Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. 
 description: >-
   - Stacks 2.0 is a layer-1 blockchain that connects to Bitcoin for security and enables decentralized apps and predictable smart contracts. 

@@ -3,7 +3,7 @@ id: stacks-fatstx
 category: Finance
 name: FatSTX Tax Exporter
 version: "0.0.1"
-icon : https://cloudflare-ipfs.com/ipfs/QmahWXLkQ7GWY9zwm7QsksGydXwWWRC38C1JTh8iCU6s5H/fatstx.svg
+icon : https://stxsats.mypinata.cloud/ipfs/QmahWXLkQ7GWY9zwm7QsksGydXwWWRC38C1JTh8iCU6s5H/fatstx.svg
 tagline: Export your STX transactions for tax software
 description: >-
   StacksBoard tools and reports for the Stacks (STX) ecosystem
