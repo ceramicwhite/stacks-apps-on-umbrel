@@ -28,4 +28,27 @@ gallery:
 path: ""
 defaultUsername: ""
 defaultPassword: ""
+releaseNotes: >-
+  Update API to v6.2.0
+
+
+  Features
+
+  - add ENV configs for DB close and API shutdown timeouts (#1366) (444f008)
+  
+  Bug Fixes
+  
+  - add memos to send-many-memo rosetta STX transfer operations (#1389) (0a552b8)
+  
+  - catch cache controller db errors (#1368) (f15df41)
+  
+  - disable faucet endpoints on mainnet (#1425) (b79b9b4)
+
+  - handle postgres.js connection timeouts (#1424) (4a2a342)
+
+  - remove duplicate tx socket updates inside db transactions (#1360) (60c185d)
+  
+  - sql transaction consistency (#1410) (01e26d9)
+  
+  - update testnet send-many-memo contract id ENV (#1420) (45ea24d)
 torOnly: false
