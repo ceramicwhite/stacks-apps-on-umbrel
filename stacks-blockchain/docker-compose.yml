@@ -52,13 +52,13 @@ services:
     init: true
     restart: on-failure
     stop_grace_period: 15m30s
-    #user: "1000:1000"
+    user: "1000:1000"
     env_file:
       - ${APP_DATA_DIR}/data/config/setup.env
     command: ["npm", "run", "start"]
     volumes:
-      - ${APP_DATA_DIR}/data/bns-data:/bns-data
-      - ${APP_DATA_DIR}/data/event-replay:/tmp/event-replay
+      - ${APP_DATA_DIR}/data/bns-data:/app/bns-data
+      - ${APP_DATA_DIR}/data/event-replay:/app/event-replay
     ports:
       - $APP_STACKS_CORE_EVENT_PORT:$APP_STACKS_CORE_EVENT_PORT
       - $APP_STACKS_API_PORT:$APP_STACKS_API_PORT
