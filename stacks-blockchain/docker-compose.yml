@@ -21,8 +21,8 @@ services:
       - stacks-blockchain-api
 
   stacks-blockchain:
-    image: ceramicwhite/stacks-blockchain:2.05.0.5.1@sha256:6d1a0ee663b6f6f255666542995de6bcf6299f32260537f484cb68040a02f30e
-    #user: "1000:1000" 
+    image: ceramicwhite/stacks-blockchain:2.05.0.5.1
+    user: 1000:1000
     init: true
     restart: on-failure
     stop_grace_period: 20m
@@ -30,7 +30,7 @@ services:
       - ${APP_DATA_DIR}/data/config/setup.env
     command:
       [
-        "/bin/stacks-node",
+        "stacks-node",
         "start",
         "--config",
         "/app/config/Config.toml",
@@ -48,11 +48,11 @@ services:
       - stacks-blockchain-api
 
   stacks-blockchain-api:
-    image: ceramicwhite/stacks-blockchain-api:v6.2.0@sha256:264a1599c2c7bf3c1b756a61667535e79d4f9a7f771746550354db5b2e898c7d
+    image: ceramicwhite/stacks-blockchain-api:v6.2.1
     init: true
     restart: on-failure
     stop_grace_period: 20m
-    user: "1000:1000"
+    user: 1000:1000
     env_file:
       - ${APP_DATA_DIR}/data/config/setup.env
     command: ["npm", "run", "start"]
