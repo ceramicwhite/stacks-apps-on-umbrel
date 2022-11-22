@@ -28,9 +28,9 @@ services:
     stop_grace_period: 20m
     env_file:
       - ${APP_DATA_DIR}/data/config/setup.env
-    command:
+    command: 
       [
-        "stacks-node",
+        "/usr/local/bin/stacks-node",
         "start",
         "--config",
         "/app/config/Config.toml",
