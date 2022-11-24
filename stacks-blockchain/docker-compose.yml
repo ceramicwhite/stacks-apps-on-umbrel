@@ -22,10 +22,10 @@ services:
 
   stacks-blockchain:
     image: ceramicwhite/stacks-blockchain:2.05.0.5.1
-    user: 1000:1000
     init: true
     restart: on-failure
     stop_grace_period: 20m
+    #user: 1000:1000
     env_file:
       - ${APP_DATA_DIR}/data/config/setup.env
     command: 
@@ -70,8 +70,8 @@ services:
 
   postgres:
     image: postgres:14-alpine@sha256:f26094a884eb8861c0c9d23ad9699889a7d6e21af9de4c04c11645c4a1cdcac0
-    restart: on-failure
     init: true
+    restart: on-failure
     stop_grace_period: 20m
     volumes:
       - ${APP_DATA_DIR}/data/postgres:/var/lib/postgresql/data
